@@ -24,6 +24,7 @@ export default function Visitor() {
               <input
                 type="text"
                 placeholder="Search location, price, or property type..."
+                aria-label="Search properties by location, price, or type"
                 className="flex-1 border-none bg-transparent text-sm outline-none placeholder:text-slate-400"
               />
             </div>
@@ -36,19 +37,28 @@ export default function Visitor() {
         <div className="mx-auto max-w-md">
           <div className="flex items-center justify-around rounded-2xl bg-white/80 backdrop-blur-md px-6 py-4 shadow-lg">
             {/* Search Button */}
-            <button className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500">
+            <button 
+              className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-500 rounded-lg"
+              aria-label="Search properties"
+            >
               <Search className="h-6 w-6" />
               <span className="text-xs font-medium">Search</span>
             </button>
 
             {/* Saved Button */}
-            <button className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500">
+            <button 
+              className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-500 rounded-lg"
+              aria-label="View saved properties"
+            >
               <Heart className="h-6 w-6" />
               <span className="text-xs font-medium">Saved</span>
             </button>
 
             {/* Profile Button */}
-            <button className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500">
+            <button 
+              className="flex flex-col items-center gap-1 transition-colors hover:text-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-500 rounded-lg"
+              aria-label="View profile"
+            >
               <User className="h-6 w-6" />
               <span className="text-xs font-medium">Profile</span>
             </button>
